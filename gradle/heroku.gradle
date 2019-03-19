@@ -1,7 +1,7 @@
 apply plugin: 'com.heroku.sdk.heroku-gradle'
 
 heroku {
-  appName = "jhipster-market"
+  appName = "ganteng-market"
   buildpacks = ["heroku/jvm"]
 }
 

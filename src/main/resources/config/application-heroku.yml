@@ -12,7 +12,7 @@
 
 eureka:
     instance:
-        hostname: jhipster-market.herokuapp.com
+        hostname: ganteng-market.herokuapp.com
         non-secure-port: 80
         prefer-ip-address: false
     client:

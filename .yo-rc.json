@@ -159,7 +159,7 @@
         "enableTranslation": true,
         "nativeLanguage": "id",
         "languages": ["id", "en"],
-        "herokuAppName": "jhipster-market",
+        "herokuAppName": "ganteng-market",
         "herokuDeployType": "git"
     }
 }
