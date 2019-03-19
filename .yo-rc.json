@@ -158,6 +158,8 @@
         ],
         "enableTranslation": true,
         "nativeLanguage": "id",
-        "languages": ["id", "en"]
+        "languages": ["id", "en"],
+        "herokuAppName": "jhipster-market",
+        "herokuDeployType": "git"
     }
 }
