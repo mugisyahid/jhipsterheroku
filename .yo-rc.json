@@ -1,0 +1,163 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.ganteng.ligar",
+            "nativeLanguage": "id"
+        },
+        "jhipsterVersion": "5.8.1",
+        "applicationType": "monolith",
+        "baseName": "jhipsterheroku",
+        "packageName": "com.ganteng.ligar",
+        "packageFolder": "com/ganteng/ligar",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": "spring-websocket",
+        "databaseType": "sql",
+        "devDatabaseType": "h2Memory",
+        "prodDatabaseType": "postgresql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": "kafka",
+        "serviceDiscoveryType": "eureka",
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": true,
+        "jwtSecretKey": "ZjA2ZWJiMWFlNDFhOTQ0MjdlZTJlNWE1MWYwMTYzOGU4NGZhZjIwNWJmNjgzYWM1ZTQwZmQ5MDczYjA5NmRiZTUwYTg1MDRkODM2OTBmMTZiNjQ3OTE0Njg5YjY5MTE4NGMzZDRlYWIzZDM0NDE2YjEzOTRhOWFiMmU4NTI4ZTQ=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["gatling", "cucumber", "protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [
+            {
+                "name": "generator-jhipster-nav-element",
+                "version": "2.1.4"
+            },
+            {
+                "name": "generator-jhipster-standalone-profile",
+                "version": "2.3.0"
+            },
+            {
+                "name": "generator-jhipster-docker",
+                "version": "2.5.0"
+            },
+            {
+                "name": "generator-jhipster-primeng",
+                "version": "2.3.0"
+            },
+            {
+                "name": "generator-jhipster-vuejs2",
+                "version": "0.8.10"
+            },
+            {
+                "name": "generator-jhipster-swagger-cli",
+                "version": "3.0.1"
+            },
+            {
+                "name": "generator-jhipster-spring-cloud-stream",
+                "version": "1.0.0"
+            },
+            {
+                "name": "generator-jhipster-primeng-charts",
+                "version": "1.2.0"
+            },
+            {
+                "name": "generator-jhipster-electron",
+                "version": "1.0.0"
+            },
+            {
+                "name": "generator-jhipster-audit-helper",
+                "version": "1.0.3"
+            },
+            {
+                "name": "generator-jhipster-leafletmap",
+                "version": "2.0.0"
+            },
+            {
+                "name": "generator-codegen",
+                "version": "0.2.1"
+            },
+            {
+                "name": "generator-jhipster-stripe-payment",
+                "version": "1.0.8"
+            },
+            {
+                "name": "generator-jhipster-angular-material-integration",
+                "version": "1.0.17"
+            },
+            {
+                "name": "generator-jhipster-quota",
+                "version": "1.0.3"
+            },
+            {
+                "name": "generator-jhipster-uaa-security-authority",
+                "version": "1.0.1"
+            },
+            {
+                "name": "generator-jhipster-administration-database",
+                "version": "1.0.4"
+            },
+            {
+                "name": "generator-jhipster-database-backup",
+                "version": "1.0.7"
+            },
+            {
+                "name": "generator-jhipster-translation",
+                "version": "1.0.4"
+            },
+            {
+                "name": "generator-jhipster-paypal",
+                "version": "1.0.5"
+            },
+            {
+                "name": "generator-jhipster-jgitver",
+                "version": "0.1.0"
+            },
+            {
+                "name": "generator-jhipster-feign-client",
+                "version": "1.0.6"
+            },
+            {
+                "name": "generator-jhipster-obfuscation-at-rest",
+                "version": "0.3.0"
+            },
+            {
+                "name": "generator-jhipster-vmware-clarity",
+                "version": "1.1.1"
+            },
+            {
+                "name": "generator-jhipster-cockroachdb",
+                "version": "0.0.10"
+            },
+            {
+                "name": "generator-jhipster-social-login-api",
+                "version": "0.0.1"
+            },
+            {
+                "name": "generator-jhipster-blockchain",
+                "version": "0.0.1"
+            },
+            {
+                "name": "generator-jhipster-aeropost",
+                "version": "1.10.0"
+            },
+            {
+                "name": "generator-jhipster-chatbot-rasa",
+                "version": "1.0.4"
+            },
+            {
+                "name": "generator-jhipster-vuejsx",
+                "version": "0.0.1"
+            },
+            {
+                "name": "generator-jhipster-file2url",
+                "version": "0.0.0"
+            }
+        ],
+        "enableTranslation": true,
+        "nativeLanguage": "id",
+        "languages": ["id", "en"]
+    }
+}
