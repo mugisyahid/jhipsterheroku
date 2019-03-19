@@ -43,19 +43,10 @@ spring:
     jackson:
         serialization:
             indent-output: true
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:jhipsterheroku;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-        username: jhipsterheroku
+        url: jdbc:h2:mem:jhipstermarket;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        username: jhipstermarket
         password:
         hikari:
             poolName: Hikari
@@ -74,11 +65,6 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
             hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.BeanClassLoaderAwareJCacheRegionFactory
-    data:
-        elasticsearch:
-            properties:
-                path:
-                    home: build/elasticsearch
     liquibase:
         contexts: dev
     mail:
@@ -128,12 +114,12 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-                base64-secret: ZjA2ZWJiMWFlNDFhOTQ0MjdlZTJlNWE1MWYwMTYzOGU4NGZhZjIwNWJmNjgzYWM1ZTQwZmQ5MDczYjA5NmRiZTUwYTg1MDRkODM2OTBmMTZiNjQ3OTE0Njg5YjY5MTE4NGMzZDRlYWIzZDM0NDE2YjEzOTRhOWFiMmU4NTI4ZTQ=
+                base64-secret: ZmQzYTU4MzhhNWExOGIxZWI2ZWZjOWZhMTJkOWZkODcyODQ4ZjEzMWM4MjkyNDFjYmZiNDc3OGI3Mzk4NDgwNGE2NGU5NTJiZGQwZDJjYTdlM2JlYmM4M2EzZmVjYzA3NzM0ZGY2M2VkMzUxZWZhZDEyNTIzZjIxNWRhNGJkZDA=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: jhipsterheroku@localhost
+        from: jhipstermarket@localhost
         base-url: http://127.0.0.1:8080
     metrics:
         logs: # Reports metrics in the logs

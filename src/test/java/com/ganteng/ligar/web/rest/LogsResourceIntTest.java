@@ -1,6 +1,6 @@
 package com.ganteng.ligar.web.rest;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

@@ -1,7 +1,7 @@
 package com.ganteng.ligar.service.mapper;
 
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.domain.User;
 import com.ganteng.ligar.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see UserMapper
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class UserMapperTest {
 
     private static final String DEFAULT_LOGIN = "johndoe";

@@ -1,6 +1,6 @@
 package com.ganteng.ligar.security;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.domain.User;
 import com.ganteng.ligar.repository.UserRepository;
 
@@ -26,7 +26,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see DomainUserDetailsService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 @Transactional
 public class DomainUserDetailsServiceIntTest {
 

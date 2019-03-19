@@ -2,11 +2,9 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { HttpResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 
-import { JhipsterherokuTestModule } from '../../../test.module';
+import { JhipstermarketTestModule } from '../../../test.module';
 import { PasswordComponent } from 'app/account/password/password.component';
 import { PasswordService } from 'app/account/password/password.service';
-import { JhiTrackerService } from 'app/core/tracker/tracker.service';
-import { MockTrackerService } from '../../../helpers/mock-tracker.service';
 
 describe('Component Tests', () => {
     describe('PasswordComponent', () => {
@@ -16,14 +14,9 @@ describe('Component Tests', () => {
 
         beforeEach(async(() => {
             TestBed.configureTestingModule({
-                imports: [JhipsterherokuTestModule],
+                imports: [JhipstermarketTestModule],
                 declarations: [PasswordComponent],
-                providers: [
-                    {
-                        provide: JhiTrackerService,
-                        useClass: MockTrackerService
-                    }
-                ]
+                providers: []
             })
                 .overrideTemplate(PasswordComponent, '')
                 .compileComponents();

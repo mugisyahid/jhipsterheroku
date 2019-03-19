@@ -3,7 +3,6 @@ package com.ganteng.ligar.web.rest;
 import com.ganteng.ligar.config.Constants;
 import com.ganteng.ligar.domain.User;
 import com.ganteng.ligar.repository.UserRepository;
-import com.ganteng.ligar.repository.search.UserSearchRepository;
 import com.ganteng.ligar.security.AuthoritiesConstants;
 import com.ganteng.ligar.service.MailService;
 import com.ganteng.ligar.service.UserService;
@@ -29,10 +28,6 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing users.
@@ -70,14 +65,11 @@ public class UserResource {
 
     private final MailService mailService;
 
-    private final UserSearchRepository userSearchRepository;
-
-    public UserResource(UserService userService, UserRepository userRepository, MailService mailService, UserSearchRepository userSearchRepository) {
+    public UserResource(UserService userService, UserRepository userRepository, MailService mailService) {
 
         this.userService = userService;
         this.userRepository = userRepository;
         this.mailService = mailService;
-        this.userSearchRepository = userSearchRepository;
     }
 
     /**
@@ -187,19 +179,5 @@ public class UserResource {
         log.debug("REST request to delete User: {}", login);
         userService.deleteUser(login);
         return ResponseEntity.ok().headers(HeaderUtil.createAlert( "userManagement.deleted", login)).build();
-    }
-
-    /**
-     * SEARCH /_search/users/:query : search for the User corresponding
-     * to the query.
-     *
-     * @param query the query to search
-     * @return the result of the search
-     */
-    @GetMapping("/_search/users/{query}")
-    public List<User> search(@PathVariable String query) {
-        return StreamSupport
-            .stream(userSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
     }
 }

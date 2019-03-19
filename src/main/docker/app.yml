@@ -1,37 +1,20 @@
 version: '2'
 services:
-    jhipsterheroku-app:
-        image: jhipsterheroku
+    jhipstermarket-app:
+        image: jhipstermarket
         environment:
             - _JAVA_OPTIONS=-Xmx512m -Xms256m
             - SPRING_PROFILES_ACTIVE=prod,swagger
             - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
             - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-            - SPRING_DATASOURCE_URL=jdbc:postgresql://jhipsterheroku-postgresql:5432/jhipsterheroku
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://jhipstermarket-postgresql:5432/jhipstermarket
             - JHIPSTER_SLEEP=30 # gives time for the JHipster Registry to boot before the application
-            - SPRING_DATA_JEST_URI=http://jhipsterheroku-elasticsearch:9200
-            - SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS=kafka
-            - SPRING_CLOUD_STREAM_KAFKA_BINDER_ZK_NODES=zookeeper
         ports:
             - 8080:8080
-    jhipsterheroku-postgresql:
+    jhipstermarket-postgresql:
         extends:
             file: postgresql.yml
-            service: jhipsterheroku-postgresql
-    jhipsterheroku-elasticsearch:
-        extends:
-            file: elasticsearch.yml
-            service: jhipsterheroku-elasticsearch
-    kafka:
-        extends:
-            file: kafka.yml
-            service: kafka
-        environment:
-            - KAFKA_ADVERTISED_HOST_NAME=kafka
-    zookeeper:
-        extends:
-            file: kafka.yml
-            service: zookeeper
+            service: jhipstermarket-postgresql
     jhipster-registry:
         extends:
             file: jhipster-registry.yml

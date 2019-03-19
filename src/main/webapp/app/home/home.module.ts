@@ -1,12 +1,12 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { JhipsterherokuSharedModule } from 'app/shared';
+import { JhipstermarketSharedModule } from 'app/shared';
 import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
-    imports: [JhipsterherokuSharedModule, RouterModule.forChild([HOME_ROUTE])],
+    imports: [JhipstermarketSharedModule, RouterModule.forChild([HOME_ROUTE])],
     declarations: [HomeComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JhipsterherokuHomeModule {}
+export class JhipstermarketHomeModule {}

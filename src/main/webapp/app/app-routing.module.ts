@@ -11,7 +11,7 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
             [
                 {
                     path: 'admin',
-                    loadChildren: './admin/admin.module#JhipsterherokuAdminModule'
+                    loadChildren: './admin/admin.module#JhipstermarketAdminModule'
                 },
                 ...LAYOUT_ROUTES
             ],
@@ -20,4 +20,4 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
     ],
     exports: [RouterModule]
 })
-export class JhipsterherokuAppRoutingModule {}
+export class JhipstermarketAppRoutingModule {}

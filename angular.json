@@ -3,14 +3,14 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "jhipsterheroku": {
+        "jhipstermarket": {
             "root": "",
             "sourceRoot": "src/main/webapp",
             "projectType": "application",
             "architect": {}
         }
     },
-    "defaultProject": "jhipsterheroku",
+    "defaultProject": "jhipstermarket",
     "cli": {
         "packageManager": "npm"
     },

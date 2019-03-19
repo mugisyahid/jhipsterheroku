@@ -1,6 +1,6 @@
 package com.ganteng.ligar.web.rest;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.config.audit.AuditEventConverter;
 import com.ganteng.ligar.domain.PersistentAuditEvent;
 import com.ganteng.ligar.repository.PersistenceAuditEventRepository;
@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

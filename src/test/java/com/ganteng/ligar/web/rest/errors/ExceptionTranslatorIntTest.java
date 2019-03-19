@@ -1,6 +1,6 @@
 package com.ganteng.ligar.web.rest.errors;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

@@ -1,6 +1,6 @@
 package com.ganteng.ligar.web.rest;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.domain.User;
 import com.ganteng.ligar.repository.UserRepository;
 import com.ganteng.ligar.security.jwt.TokenProvider;
@@ -32,7 +32,7 @@ import static org.hamcrest.Matchers.not;
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

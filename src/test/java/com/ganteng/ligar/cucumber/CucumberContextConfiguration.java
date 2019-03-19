@@ -1,6 +1,6 @@
 package com.ganteng.ligar.cucumber;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import cucumber.api.java.Before;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -8,7 +8,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @SpringBootTest
 @WebAppConfiguration
-@ContextConfiguration(classes = JhipsterherokuApp.class)
+@ContextConfiguration(classes = JhipstermarketApp.class)
 public class CucumberContextConfiguration {
 
     @Before

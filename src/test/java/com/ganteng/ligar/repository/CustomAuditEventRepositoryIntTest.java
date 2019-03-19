@@ -1,6 +1,6 @@
 package com.ganteng.ligar.repository;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.config.Constants;
 import com.ganteng.ligar.config.audit.AuditEventConverter;
 import com.ganteng.ligar.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static com.ganteng.ligar.repository.CustomAuditEventRepository.EVENT_DATA
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

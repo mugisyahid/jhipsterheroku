@@ -1,6 +1,6 @@
 package com.ganteng.ligar.web.rest;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.config.Constants;
 import com.ganteng.ligar.domain.Authority;
 import com.ganteng.ligar.domain.User;
@@ -48,7 +48,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AccountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class AccountResourceIntTest {
 
     @Autowired

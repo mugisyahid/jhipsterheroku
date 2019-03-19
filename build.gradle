@@ -10,9 +10,7 @@ buildscript {
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${spring_boot_version}"
         classpath "io.spring.gradle:propdeps-plugin:0.0.10.RELEASE"
-        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.0"
         classpath "gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:1.5.2"
-        classpath "gradle.plugin.com.heroku.sdk:heroku-gradle:1.0.4"
         //jhipster-needle-gradle-buildscript-dependency - JHipster will add additional gradle build script plugins here
     }
 }
@@ -63,7 +61,7 @@ version = '0.0.1-SNAPSHOT'
 description = ''
 
 bootWar {
-    mainClassName = 'com.ganteng.ligar.JhipsterherokuApp'
+    mainClassName = 'com.ganteng.ligar.JhipstermarketApp'
 }
 
 war {
@@ -73,7 +71,7 @@ war {
 }
 
 springBoot {
-    mainClassName = 'com.ganteng.ligar.JhipsterherokuApp'
+    mainClassName = 'com.ganteng.ligar.JhipstermarketApp'
 }
 
 if (OperatingSystem.current().isWindows()) {
@@ -132,8 +130,6 @@ task cucumberTestReport(type: TestReport) {
 
 apply from: 'gradle/docker.gradle'
 apply from: 'gradle/sonar.gradle'
-apply from: 'gradle/swagger.gradle'
-apply from: 'gradle/heroku.gradle'
 //jhipster-needle-gradle-apply-from - JHipster will add additional gradle scripts to be applied here
 
 if (project.hasProperty('prod')) {
@@ -158,7 +154,7 @@ liquibase {
         main {
             driver ''
             url ''
-            username 'jhipsterheroku'
+            username 'jhipstermarket'
             password ''
             changeLogFile 'src/main/resources/config/liquibase/master.xml'
             defaultSchemaName ''
@@ -168,7 +164,7 @@ liquibase {
         diffLog {
             driver ''
             url ''
-            username 'jhipsterheroku'
+            username 'jhipstermarket'
             password ''
             changeLogFile project.ext.diffChangelogFile
             referenceUrl 'hibernate:spring:com.ganteng.ligar.domain?dialect=&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy'
@@ -229,24 +225,11 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
-    compile "org.springframework.boot:spring-boot-starter-data-elasticsearch"
-    // Spring Data Jest dependencies for Elasticsearch
-    compile ("com.github.vanroy:spring-boot-starter-data-jest") {
-        exclude module: 'commons-logging'
-    }
-    // log4j needed to create embedded elasticsearch instance
-    runtime "org.apache.logging.log4j:log4j-api:2.7"
-    runtime "org.apache.logging.log4j:log4j-core:2.7"
-    // end of Spring Data Jest dependencies
-    compile "org.springframework.cloud:spring-cloud-stream"
-    compile "org.springframework.cloud:spring-cloud-stream-binder-kafka"
-    compile "org.springframework.kafka:spring-kafka"
     compile "org.springframework.boot:spring-boot-starter-security"
     compile ("org.springframework.boot:spring-boot-starter-web") {
         exclude module: 'spring-boot-starter-tomcat'
     }
     compile "org.springframework.boot:spring-boot-starter-undertow"
-    compile "org.springframework.boot:spring-boot-starter-websocket"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile "org.zalando:problem-spring-web:0.24.0-RC.0"
     compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
@@ -255,7 +238,6 @@ dependencies {
     compile "org.springframework.security:spring-security-config"
     compile "org.springframework.security:spring-security-data"
     compile "org.springframework.security:spring-security-web"
-    compile "org.springframework.security:spring-security-messaging"
     compile "io.jsonwebtoken:jjwt-api"
     runtime "io.jsonwebtoken:jjwt-impl"
     runtime "io.jsonwebtoken:jjwt-jackson"
@@ -286,9 +268,6 @@ dependencies {
     testCompile "org.hamcrest:hamcrest-library"
     testCompile "com.h2database:h2"
     liquibaseRuntime "com.h2database:h2"
-    testCompile "org.springframework.cloud:spring-cloud-stream-test-support"
-    compile "org.springframework.cloud:spring-cloud-localconfig-connector"
-    compile "org.springframework.cloud:spring-cloud-heroku-connector"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 }
 

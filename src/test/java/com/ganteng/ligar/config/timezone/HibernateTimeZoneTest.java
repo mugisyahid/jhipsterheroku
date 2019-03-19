@@ -1,6 +1,6 @@
 package com.ganteng.ligar.config.timezone;
 
-import com.ganteng.ligar.JhipsterherokuApp;
+import com.ganteng.ligar.JhipstermarketApp;
 import com.ganteng.ligar.repository.timezone.DateTimeWrapper;
 import com.ganteng.ligar.repository.timezone.DateTimeWrapperRepository;
 import org.junit.Before;
@@ -23,7 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Unit tests for the UTC Hibernate configuration.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterherokuApp.class)
+@SpringBootTest(classes = JhipstermarketApp.class)
 public class HibernateTimeZoneTest {
 
     @Autowired

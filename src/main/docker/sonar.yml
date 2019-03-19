@@ -1,6 +1,6 @@
 version: '2'
 services:
-    jhipsterheroku-sonar:
+    jhipstermarket-sonar:
         image: sonarqube:7.1
         ports:
             - 9001:9000

@@ -17,7 +17,7 @@ import locale from '@angular/common/locales/id';
         DatePipe
     ]
 })
-export class JhipsterherokuCoreModule {
+export class JhipstermarketCoreModule {
     constructor() {
         registerLocaleData(locale);
     }
