@@ -1,0 +1,24 @@
+{
+    "jhipstermarketApp": {
+        "store": {
+            "home": {
+                "title": "Stores",
+                "createLabel": "Buat Store baru",
+                "createOrEditLabel": "Buat atau edit Store"
+            },
+            "created": "Store dengan id {{ param }} telah dibuat",
+            "updated": "Store dengan id {{ param }} telah diperbaharui",
+            "deleted": "Store dengan id {{ param }} telah dihapus",
+            "delete": {
+                "question": "Apakah anda yakin ingin menghapus Store {{ id }}?"
+            },
+            "detail": {
+                "title": "Store"
+            },
+            "name": "Name",
+            "description": "Description",
+            "rating": "Rating",
+            "reputation": "Reputation"
+        }
+    }
+}
